@@ -5,9 +5,9 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        t = {}
-        size = len(nums)
+        size=len(nums)
         for i in xrange(0,size):
-            if target - nums[i] in t:
-                return t[target - nums[i]],i
-t[nums[i]] = i
+            for j in xrange(i+1,size):
+               # note here: i is not equal to j and for need ()
+		if (nums[i]+nums[j]==target):
+				return i,j
