@@ -4,6 +4,9 @@ class Solution(object):
 	def rotate(self, nums, k):
 		
 		length=len(nums)
+		if length<2
+			return nums
+		
 		new=[0]*length
 		for i in range(0,length):
 			if i+k<length:
@@ -13,4 +16,4 @@ class Solution(object):
 		return new
 
 a=Solution()
-print a.rotate(nums,k)为什么在python 里面编译通过，可是在LeetCode里面就出错啦？？
+print a.rotate(nums,k)#为什么在python 里面编译通过，可是在LeetCode里面就出错啦？？
