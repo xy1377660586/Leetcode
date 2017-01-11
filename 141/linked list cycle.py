@@ -20,7 +20,7 @@ class Solution(object):
 			
 		q,s=head,head
 		while q and q.next: # 注意这个条件，如果只是用while q.next 是不可以的
-		#这是英文这两指针， P 和s 中的p 是每次走两步的，所以的话，q！=None和q.next！=None必须同时满足
+		#这是这两指针， P 和s 中的p 是每次走两步的，所以的话，q！=None和q.next！=None必须同时满足
 			q=q.next.next
 			
 			s=s.next
