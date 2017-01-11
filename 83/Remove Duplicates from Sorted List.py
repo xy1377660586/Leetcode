@@ -1,17 +1,13 @@
-class Solution:
-    # @param head, a ListNode
-    # @return a ListNode
-    def deleteDuplicates(self, head):
-        delflag = 1
-        flag = 1
-        p = head
-        while(p != None and p.next != None):
-            if p.val != p.next.val:
-                flag = 1
-                p = p.next
-            elif flag < delflag:
-                flag += 1;
-                p = p.next
-            else:
-                p.next = p.next.next
-        return head
+class Solution(object):
+	def deleteDuplicates(self, head):
+		"""
+		:type head: ListNode
+		:rtype: ListNode
+		"""
+		if head==None or head.next==None:
+			return head
+		if head.val==head.next.val:
+			head=self.deleteDuplicates(head.next)
+		else:
+			head.next=self.deleteDuplicates(head.next)
+		return head递归的方法，一个元素一个元素的判断用
