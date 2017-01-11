@@ -1,3 +1,4 @@
+
 # Definition for singly-linked list.
 # class ListNode(object):
 #     def __init__(self, x):
@@ -14,7 +15,7 @@ class Solution(object):
         foo,rtn = None,None
         if head:
             dic[head.val] = 1
-            rtn = ListNode(head.val)#ListNode(head.val)啥意思！
+            rtn = ListNode(head.val)
             foo = rtn
         while head:
             if not head.val in dic:
