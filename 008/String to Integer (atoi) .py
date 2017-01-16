@@ -16,14 +16,14 @@ class Solution(object):
             sign = -1
         
         for i in range(i, length) :
-            if str[i] < '0' or str[i] > '9' :
+            if str[i] < '0' or str[i] > '9' : #这个条件的作用呢? 为啥?
                 break
             ret = ret * 10 + int(str[i])
-            if ret > sys.maxint:
+            if ret > sys.maxint:#sys.maxint 是什么?
                 break
         ret *= sign
         if ret >= MaxInt:
             return MaxInt
         if ret < MaxInt * -1 :
-            return MaxInt * - 1 - 1 
+            return MaxInt * - 1 - 1 #补码表示的问题
         return ret
