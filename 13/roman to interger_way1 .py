@@ -1,10 +1,16 @@
-class Solution:  
-    # @return a boolean  
-    def isPalindrome(self, x):  
-        xx = x  
-        new_xx = 0  
-        while xx > 0:  
-            new_xx = new_xx * 10 + xx % 10  
-            xx /= 10  
-  
-        return new_xx == x 
+class Solution(object):
+    def romanToInt(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        digits = {"I":1, "V":5, "X":10, "L":50, "C":100, "D":500, "M":1000}
+        sum=0
+        maxdigit=1
+        for i in range(len(s)-1,-1,-1):
+            if digits[s[i]]>=maxdigit:
+                maxdigit=digits[s[i]]
+                sum+=digits[s[i]]
+            else:
+                sum-=digits[s[i]]
+        return sum
