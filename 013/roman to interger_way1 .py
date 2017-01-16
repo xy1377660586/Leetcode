@@ -14,3 +14,4 @@ class Solution(object):
             else:
                 sum-=digits[s[i]]
         return sum
+    #思路见 http://blog.csdn.net/coder_orz/article/details/51448537
