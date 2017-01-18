@@ -28,6 +28,4 @@ class Solution(object):
 			temp.next=l1
 		else:
 			temp.next=l2
-		return dump.next
-
-
+		return dump.next #note that here is dump.next rather than temp.next dump.next=head
