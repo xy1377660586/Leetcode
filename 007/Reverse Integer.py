@@ -9,5 +9,10 @@ class Solution(object):
             flag=-1
         a=str(abs(x))
 
-        return int(a[::-1])*flag
-                
+        x = int(a[::-1])*flag
+        
+        if x < -(1 << 31) or x > (1 << 31) - 1:
+            return 0
+        else:
+            
+            return x
