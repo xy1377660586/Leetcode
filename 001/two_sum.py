@@ -8,6 +8,6 @@ class Solution(object):
         size=len(nums)
         for i in xrange(0,size):
             for j in xrange(i+1,size):
-               # note here: i is not equal to j and for need ()
+                
 		if (nums[i]+nums[j]==target):
 				return i,j
